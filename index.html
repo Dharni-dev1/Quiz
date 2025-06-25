@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #166088;
+            --accent-color: #4fc3f7;
+            --text-color: #333;
+            --light-bg: #f5f7fa;
+            --correct-color: #4caf50;
+            --wrong-color: #f44336;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #questionset {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .question:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .question p {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            padding: 12px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            background-color: #f9f9f9;
+        }
+
+        label:hover {
+            background-color: #eef7ff;
+            transform: translateX(5px);
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+            transform: scale(1.1);
+        }
+
+        button[type="submit"] {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            display: block;
+            margin: 30px auto 0;
+        }
+
+        button[type="submit"]:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+                @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            #questionset {
+                padding: 15px;
+            }
+            
+            .question {
+                padding: 15px;
+            }
+            
+            .question p {
+                font-size: 1rem;
+            }
+        }
+
+               input[type="radio"]:checked + span {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+               .correct {
+            background-color: rgba(76, 175, 80, 0.1);
+            border-left: 4px solid var(--correct-color);
+        }
+
+        .wrong {
+            background-color: rgba(244, 67, 54, 0.1);
+            border-left: 4px solid var(--wrong-color);
+        }
+</style>
+</head>
+
+<body>
+    <h1>Quiz game </h1>
+    <hr>
+
+    <form action="" method="get" id="questionset">
+
+        <div class="question">
+            <p>Q1 What is the national animal of india?</p>
+
+            <label for="q1op1"><input type="radio" id="q1op1" name="optionq1" value="option1">LION</label>
+            <label for="q1op2"><input type="radio" id="q1op2" name="optionq1" value="option2">TIGER</label>
+            <label for="q1op3"><input type="radio" id="q1op3" name="optionq1" value="option3">FOX</label>
+            <label for="q1op4"><input type="radio" id="q1op4" name="optionq1" value="option4">WOLF</label>
+        </div>
+        <div class="question">
+            <p>Q2 What is the captial of India?
+            </p>
+            <label for="q1op1"><input type="radio" id="q1op1" name="optionq2" value="option1">MAHARASHTRA</label>
+            <label for="q1op2"><input type="radio" id="q1op2" name="optionq2" value="option2">NEW DELHI</label>
+            <label for="q1op3"><input type="radio" id="q1op3" name="optionq2" value="option3">DELHI</label>
+            <label for="q1op4"><input type="radio" id="q1op4" name="optionq2" value="option4">TAMILNADU</label>
+        </div>
+        <div class="question">
+            <p>Q3 What is the captial of MAHARASHTRA?</p>
+            <label for="q1op1"><input type="radio" id="q1op1" name="optionq3" value="option1">TAMILNADU</label>
+            <label for="q1op2"><input type="radio" id="q1op2" name="optionq3" value="option2">ANDHAR PARDESH</label>
+            <label for="q1op3"><input type="radio" id="q1op3" name="optionq3" value="option3">MUMBAI</label>
+            <label for="q1op4"><input type="radio" id="q1op4" name="optionq3" value="option4">NAVI MUMBAI</label>
+        </div>
+        <div class="question">
+            <p>Q4 What is the national bird of India?</p>
+            <label for="q1op1"><input type="radio" id="q1op1" name="optionq4" value="option1">Pegion</label>
+            <label for="q1op2"><input type="radio" id="q1op2" name="optionq4" value="option2">Peacock</label>
+            <label for="q1op3"><input type="radio" id="q1op3" name="optionq4" value="option3">Egale</label>
+            <label for="q1op4"><input type="radio" id="q1op4" name="optionq4" value="option4">Sparrow</label>
+        </div>
+
+        <br><br>
+
+        <button type="submit">Submit Answer</button>
+    </form>
+
+    <script>
+const questionset = document.getElementById("questionset");
+let ansmark = 0;
+
+questionset.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let formData = new FormData(questionset);
+
+    console.log(...formData.entries());
+
+    for (let d of formData.entries()) {
+        if (d[0] === "optionq1" && d[1] === "option2") {
+            ansmark++;
+        } else if (d[0] === "optionq2" && d[1] === "option2") {
+            ansmark++;
+        } else if (d[0] === "optionq3" && d[1] === "option3") {
+            ansmark++;
+        } else if (d[0] === "optionq4" && d[1] === "option2") {
+            ansmark++;
+        }
+    }
+
+    console.log("Your score:", ansmark);
+    alert("Your score:"+ ansmark);
+});
+</script>
+
+</body>
+
+</html>
